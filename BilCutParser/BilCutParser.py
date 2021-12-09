@@ -70,10 +70,10 @@ def ParseSrt(path:str)->str:
     BCut = BCUTParser(path)
     return BCut.ListToSrt(BCut.ParseToList())
 
-def Save_Srt(path:str)->None:
+def Save_Srt(inputPath:str,OutputPath:str)->None:
     """
     Save A String To A File
     """
-    srt = ParseSrt(path)
-    with open(path,"w",encoding='utf-8') as f:
+    srt = ParseSrt(inputPath)
+    with open(OutputPath,"w",encoding='utf-8') as f:
         f.write(srt)
